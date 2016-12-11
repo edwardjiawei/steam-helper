@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/e1ba8156f25009d5a616d7dc12dd25b08ec05fc8/winjs/winjs-2.1.d.ts",
+    "raw": "registry:dt/winjs#2.1.0+20160417153052",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/e1ba8156f25009d5a616d7dc12dd25b08ec05fc8/winjs/winjs-2.1.d.ts"
+  }
+}

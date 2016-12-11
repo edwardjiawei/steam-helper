@@ -1,0 +1,92 @@
+﻿html {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #2D2D30;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+#title-bar {
+    -webkit-app-region: drag;
+    height: 32px;
+    padding: 0px;
+    margin: 0px;
+    color: #ADADAD;
+    font-family: sans-serif;
+}
+#title {
+    position: fixed;
+    top: 0px;
+    left: 23px;
+    line-height: 32px;
+    font-size: 14px;
+}
+#status {
+    position: fixed;
+    top: 0px;
+    left: 5px;
+    line-height: 28px;
+    font-size: 25px;
+    color: red;
+}
+#title-bar-btns {
+    -webkit-app-region: no-drag;
+    position: fixed;
+    top: 1px;
+    right: 0px;
+}
+#title-bar-btns button {
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    color: #F1F1F1;
+    font-size: 16px;
+}
+#title-bar-btns button:hover {
+    background-color: #3F3F41;
+}
+#content {
+    padding: 12px;
+    color: #CCCCCC;
+}
+
+#divv {
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+  width: 90%;
+}
+
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+  max-width: 110px;
+  max-height: 110px;
+}
+
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+li:hover {
+  background: #3F3F41;
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/e59b58703f9985064a941f74d0344e2f2cd3aca3/console-stamp/console-stamp.d.ts",
+    "raw": "registry:dt/console-stamp#0.2.0+20151230004349",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/e59b58703f9985064a941f74d0344e2f2cd3aca3/console-stamp/console-stamp.d.ts"
+  }
+}
