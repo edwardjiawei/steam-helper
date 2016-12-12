@@ -1,10 +1,10 @@
 {
-  "name": "nodejs-console-app1",
+  "name": "steam-helper",
   "version": "0.0.0",
-  "description": "NodejsConsoleApp1",
+  "description": "pre-alpha",
   "main": "app.js",
   "author": {
-    "name": "Reszta"
+    "name": "rest2t"
   },
   "devDependencies": {
     "electron-prebuilt": "^1.4.10"
