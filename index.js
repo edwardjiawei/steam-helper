@@ -14,8 +14,8 @@ Object.keys(config.get()).forEach(function (key) {
     } else {
         var avatar = 'img/ava.png';
     }
-    setTimeout(function () { console.log(SteamTotp.generateAuthCode(secret)); }, 3000);
-    document.getElementById('accounts').innerHTML += '<li id="' + key + '" onclick="userWindow(this.id)" ><img src="' + avatar + '"><h3>' + key + '</h3><p>Code: </p></li>'
+    setInterval(function () { document.getElementById('code-' + key).innerHTML = SteamTotp.generateAuthCode(secret); }, 3000);
+    document.getElementById('accounts').innerHTML += '<li id="' + key + '" onclick="userWindow(this.id)" ><img src="' + avatar + '"><h3>' + key + '</h3><p id="code-' + key + '"></p></li>'
 });
 
 function userWindow(username) {
@@ -25,24 +25,13 @@ function userWindow(username) {
         protocol: 'file:',
         slashes: true
     }))
-    userWindow.show()
+    userWindow.once('ready-to-show', () => {
+        userWindow.show()
+    })
     userWindow.webContents.openDevTools()
     userWindow.webContents.on('dom-ready', function () {
         userWindow.webContents.send('username', username);
-        console.log('username sent');
     }); 
-}
-
-function addAccount() {
-    const {BrowserWindow} = require('electron').remote
-    let child = new BrowserWindow({ width: 500, height: 400, modal: true, show: false, frame: false })
-    child.loadURL(url.format({
-        pathname: path.join(__dirname, 'addAccount.html'),
-        protocol: 'file:',
-        slashes: true
-    }))
-    child.show()
-    child.webContents.openDevTools()
 }
 
 var kappa;
@@ -50,6 +39,37 @@ var request = require('request');
 request('http://store.steampowered.com/api/appdetails?appids=730', function (error, response, body) {
     if (!error && response.statusCode == 200) {
         parsed = JSON.parse(body);
-        console.log(parsed['730']['data']['header_image']);
+        //console.log(parsed['730']['data']['header_image']);
     }
 })
+
+WinJS.Namespace.define("index", {
+    addAccount: WinJS.UI.eventHandler(function (ev) {
+        const {BrowserWindow} = require('electron').remote
+        let child = new BrowserWindow({ width: 500, height: 400, modal: true, show: false, frame: false })
+        child.loadURL(url.format({
+            pathname: path.join(__dirname, 'addAccount.html'),
+            protocol: 'file:',
+            slashes: true
+        }))
+        child.once('ready-to-show', () => {
+            child.show()
+        })
+        child.webContents.openDevTools()
+    }),
+    importAccount: WinJS.UI.eventHandler(function (ev) {
+        const {BrowserWindow} = require('electron').remote
+        let child = new BrowserWindow({ width: 500, height: 400, modal: true, show: false, frame: false })
+        child.loadURL(url.format({
+            pathname: path.join(__dirname, 'importAccount.html'),
+            protocol: 'file:',
+            slashes: true
+        }))
+        child.once('ready-to-show', () => {
+            child.show()
+        })
+        child.webContents.openDevTools()
+    })
+});
+
+WinJS.UI.processAll();

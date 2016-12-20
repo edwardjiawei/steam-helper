@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/4f7524fc65c0d1389af81a83a95dfe1ea59ad5e9/electron/electron-prebuilt.d.ts",
+    "raw": "registry:dt/electron-prebuilt#0.30.1+20160405225030",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/4f7524fc65c0d1389af81a83a95dfe1ea59ad5e9/electron/electron-prebuilt.d.ts"
+  }
+}

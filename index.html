@@ -5,6 +5,18 @@
     <title>Kappa</title>
     <link rel="stylesheet" href="default.css" />
     <link rel="stylesheet" href="node_modules/winjs/css/ui-dark.css" />
+    <!-- BEGINTEMPLATE: Template code for an AppBar -->
+    <div id="createAppBar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'bottom'}">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'Add account',icon:'add',tooltip:'Add new account',section:'primary',onclick:index.addAccount}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdImport',label:'Import account',icon:'import',tooltip:'Import account',section:'primary',onclick:index.importAccount}"></button>
+        <!--<button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdEdit',label:'Edit',icon:'edit',tooltip:'Edit item',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdCamera',label:'Camera',icon:'camera',tooltip:'Take a picture',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdSettings',label:'Settings',icon:'settings',tooltip:'Settings',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdShare',label:'Share',icon:'reshare',tooltip:'Share',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPrint',label:'Print',section:'secondary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdNetwork',label:'Network',section:'secondary',onclick:Sample.outputCommand}"></button>-->
+    </div>
+    <!-- ENDTEMPLATE -->
 </head>
 <body>
     <div id="title-bar">
@@ -17,16 +29,9 @@
         </div>
     </div>
     <div id="content">
-            <button onclick="addAccount()" class="win-button">Add account:</button>
-            <!--<h2>Code:</h2>
-            <h3 id="username"></h3>
-            <h1 id="code"></h1>
-            <progress id="bar" value="0" max="30"> </progress>-->
-                <div id="divv">
-                    <ul id="accounts">
-                        
-                    </ul>
-                </div>
+        <div id="divv">
+            <ul id="accounts"></ul>
+        </div>
     </div>
 </body>
     <script src="node_modules/winjs/js/base.js"></script>

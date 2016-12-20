@@ -40,6 +40,7 @@
     <Compile Include="user.js" />
     <Content Include="default.css" />
     <Content Include="addAccount.html" />
+    <Content Include="importAccount.html" />
     <Content Include="index.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -50,12 +51,14 @@
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\console-stamp\" />
+    <Folder Include="typings\globals\electron-prebuilt\" />
     <Folder Include="typings\globals\node\" />
     <Folder Include="typings\globals\steam\" />
     <Folder Include="typings\globals\winjs\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\console-stamp\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\electron-prebuilt\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\steam\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\winjs\index.d.ts" />
